@@ -1,7 +1,7 @@
 <project name="test" default="capital">
 
 	<target name="capital">
-		<echo> hello ioooiiiiiifrom capital target </echo>
+		<echo> hello ioooiii-----iiifrom capital target </echo>
 	</target>
 	
 	
