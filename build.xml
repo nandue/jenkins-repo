@@ -1,14 +1,26 @@
-<?xml version="1.0"?>
-<project name='file-system-tasks' default='copy'>
-	<target name='clean'>
-		<delete dir='build'/>
+<project name="test" default="run">    
 	
-	</target>
-	<target name='create a dir' depends='clean'>
-		<mkdir dir="build/classes"/>
-	
-	</target>
-	<target name='copy' depends='create a dir'>
-		<copy file='src/file1.txt' todir='dest'/>
-	</target> 
+	<target name="clean">
+       <delete dir="build" /> <!-- clean -->
+    </target>
+
+    <target name="compile" depends="clean">
+        <echo> Java Compile task </echo>
+       <mkdir dir="build/classes" /> 
+         <javac srcdir="src" destdir="build/classes" /> <!-- java compile -->
+    </target>
+   
+   <target name="package" depends="compile">
+       <echo> Java package task </echo>
+       <jar basedir="build/classes" destfile="build/jar/Helloworld.jar"> <!-- package -->
+          <manifest>
+             <attribute name="Main-Class" value="Hello2"/>
+          </manifest>
+       </jar>
+   </target>
+   <target name="run" depends="package"> 
+      <echo> running jar file task </echo>
+      <java jar="build/jar/Helloworld.jar" fork='true'/> <!-- run -->
+   </target>
+
 </project>
