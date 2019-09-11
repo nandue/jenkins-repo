@@ -1,9 +1,0 @@
-<project name="test" default="capital">
-
-	<target name="capital">
-		<echo> hello from capital target </echo>
-	</target>
-	
-	
-
-</project>
