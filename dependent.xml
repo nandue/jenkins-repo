@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<project name="test" default="deploy">
+
+	<target name="deploy" depends="clean,package">
+		<echo> hello deploy</echo>
+	</target>
+	<target name="package" depends="compile">
+		<echo>hello package</echo>
+	</target>
+	<target name="compile" depends="clean">
+		<echo> hello compile </echo>
+	</target>
+	<target name="clean" >
+		<echo>hello clean</echo>		
+	</target>
+</project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

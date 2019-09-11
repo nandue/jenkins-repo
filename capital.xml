@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+   <project name="Hello World Project" default="info">
+   
+   <target name="info">
+      <echo>Hello World - Welcome to capital</echo>
+	  <!--<mkdir dir="build/classes" />
+         <javac srcdir="src" destdir="build/classes" /> -->
+   </target>
+   
+   <!--
+   
+   <target name="deploy" depends="package">
+  ....
+</target>
+
+<target name="package" depends="clean,compile">
+  ....
+</target>
+
+<target name="clean" >
+  ....
+</target>
+
+<target name="compile" >
+  ....
+</target>
+
+-->
+   
+   
+</project>
